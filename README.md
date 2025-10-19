@@ -1,75 +1,36 @@
-# Web Search SPA
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A single-page application that allows users to input a website URL and a search query to retrieve the top 10 matches of HTML DOM content chunks based on semantic search.
+## Getting Started
 
-## Features
+First, run the development server:
 
-- Frontend: Next.js with TypeScript and Tailwind CSS
-- Backend: FastAPI with HTML parsing, tokenization, and vector search
-- Vector Database: Weaviate (embedded for simplicity)
-- Semantic search using sentence transformers
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Setup
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Prerequisites
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Python 3.8+
-- Node.js 16+
-- Docker (for Weaviate, optional if using embedded)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Backend Setup
+## Learn More
 
-1. Navigate to the backend directory:
-   ```
-   cd web-search-spa/backend
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Frontend Setup
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-1. Navigate to the frontend directory:
-   ```
-   cd web-search-spa/frontend
-   ```
+## Deploy on Vercel
 
-2. Install dependencies:
-   ```
-   npm install
-   ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Running the Application
-
-1. Start the backend server:
-   ```
-   cd web-search-spa/backend
-   uvicorn main:app --reload --host 0.0.0.0 --port 8000
-   ```
-
-2. In a new terminal, start the frontend:
-   ```
-   cd web-search-spa/frontend
-   npm run dev
-   ```
-
-3. Open your browser and go to `http://localhost:3000`
-
-## Usage
-
-1. Enter a website URL (e.g., https://example.com)
-2. Enter a search query (e.g., "about us")
-3. Click "Search"
-4. View the top 10 matching HTML content chunks
-
-## API Endpoint
-
-- POST `/search`: Accepts JSON with `url` and `query` fields, returns top 10 matches
-
-## Technologies Used
-
-- Frontend: Next.js, TypeScript, Tailwind CSS
-- Backend: FastAPI, BeautifulSoup, tiktoken, sentence-transformers, Weaviate
-- Vector Search: Weaviate with embedded option
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
